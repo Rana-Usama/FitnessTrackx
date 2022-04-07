@@ -11,35 +11,26 @@ import BottomTab from '../components/common/BottomTab';
 //config
 import Colors from '../config/Colors';
 
-function SettingsScreen(props) {
+function UserScreen(props) {
 
     const data = [
         {
-            title: 'Customize'
+            title: 'Health Track'
         },
         {
-            title: 'General'
+            title: 'Weight Track'
         },
         {
-            title: 'Help & information'
+            title: 'Activity'
         },
         {
-            title: 'Privacy'
+            title: 'Change Profile'
         },
-        {
-            title: 'Notification'
-        },
-        {
-            title: 'About'
-        },
-        {
-            title: 'FAQs'
-        }
+
     ]
 
     return (
         <Screen style={{ flex: 1, justifyContent: 'flex-start', alignItems: "center", backgroundColor: Colors.white }}>
-
 
             <View style={{ width: '100%', height: RFPercentage(32), justifyContent: 'flex-start', alignItems: 'center', backgroundColor: Colors.primary }} >
                 {/* Logo */}
@@ -50,16 +41,22 @@ function SettingsScreen(props) {
                 <View style={{ width: '100%', height: RFPercentage(9), position: 'absolute', bottom: 0, backgroundColor: Colors.white, borderTopLeftRadius: RFPercentage(5) }} />
             </View>
 
-            <Text style={{ marginTop: RFPercentage(-5), color: Colors.primary, fontSize: RFPercentage(3.2), fontWeight: 'bold' }} >
-                Settings
-            </Text>
-            {/* content */}
+            <View style={{ marginTop: RFPercentage(-6), width: '90%', justifyContent: 'center', alignItems: 'center' }}  >
+                <TouchableOpacity activeOpacity={0.8} >
+                    <Image style={{ width: RFPercentage(15), height: RFPercentage(15) }} source={require('../../assets/images/profile.png')} />
+                </TouchableOpacity>
+                <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: RFPercentage(2) }} >
+                    <Text style={{ color: Colors.black, fontSize: RFPercentage(2.4), fontWeight: 'bold' }} >
+                        Emilia Jhonson
+                    </Text>
+                </View>
+            </View>
 
+            {/* content */}
             <ScrollView style={{ flex: 1, width: '100%' }} >
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: '100%' }}>
 
-                    <View style={{ marginTop: RFPercentage(4), borderRadius: RFPercentage(1.5), width: RFPercentage(48), height: RFPercentage(54.5), borderColor: Colors.grey, borderWidth: RFPercentage(0.1) }} >
-
+                    <View style={{ marginTop: RFPercentage(5), borderRadius: RFPercentage(1.5), width: RFPercentage(48), height: RFPercentage(32), borderColor: Colors.grey, borderWidth: RFPercentage(0.1) }} >
                         {data.map((item, i) => (
                             <View key={i} style={{ width: '100%' }} >
                                 <View style={{ alignSelf: 'center', marginTop: RFPercentage(3), width: '90%', justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'row' }} >
@@ -70,7 +67,7 @@ function SettingsScreen(props) {
                                         <MaterialIcons name="navigate-next" style={{ fontSize: RFPercentage(3) }} color={Colors.black} />
                                     </TouchableOpacity>
                                 </View>
-                                {i == 6 ?
+                                {i == 3 ?
                                     null
                                     :
                                     <View style={{ backgroundColor: Colors.grey, height: RFPercentage(0.1), width: '100%', marginTop: RFPercentage(2) }} />
@@ -78,8 +75,8 @@ function SettingsScreen(props) {
                             </View>
                         ))}
                     </View>
+
                 </View>
-                <View style={{ marginBottom: RFPercentage(20) }} />
             </ScrollView>
 
             {/* Bottom Tab */}
@@ -88,4 +85,4 @@ function SettingsScreen(props) {
     );
 }
 
-export default SettingsScreen;
+export default UserScreen;
