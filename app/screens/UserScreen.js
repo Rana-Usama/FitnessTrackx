@@ -32,10 +32,10 @@ function UserScreen(props) {
     return (
         <Screen style={{ flex: 1, justifyContent: 'flex-start', alignItems: "center", backgroundColor: Colors.white }}>
 
-            <View style={{ width: '100%', height: RFPercentage(32), justifyContent: 'flex-start', alignItems: 'center', backgroundColor: Colors.primary }} >
+            <View style={{ width: '100%', height: RFPercentage(30), justifyContent: 'flex-start', alignItems: 'center', backgroundColor: Colors.primary }} >
                 {/* Logo */}
                 <Image style={{ marginTop: RFPercentage(-2), width: RFPercentage(30), height: RFPercentage(25) }} source={require('../../assets/images/logo.png')} />
-                <TouchableOpacity activeOpacity={0.4} style={{ position: 'absolute', left: RFPercentage(3.5), top: RFPercentage(6.5) }} >
+                <TouchableOpacity onPress={() => props.navigation.navigate("HomeScreen")} activeOpacity={0.4} style={{ position: 'absolute', left: RFPercentage(3.5), top: RFPercentage(6.5) }} >
                     <Ionicons name="chevron-back" style={{ fontSize: RFPercentage(3) }} color={Colors.white} />
                 </TouchableOpacity>
                 <View style={{ width: '100%', height: RFPercentage(9), position: 'absolute', bottom: 0, backgroundColor: Colors.white, borderTopLeftRadius: RFPercentage(5) }} />

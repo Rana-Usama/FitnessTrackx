@@ -14,7 +14,7 @@ function BottomTab({ props }) {
         <View style={{ borderColor: Colors.primary, borderWidth: RFPercentage(0.1), borderTopLeftRadius: RFPercentage(3), borderTopRightRadius: RFPercentage(3), flexDirection: 'row', alignItems: 'center', position: 'absolute', justifyContent: 'center', bottom: 0, width: "100%", height: RFPercentage(7), backgroundColor: Colors.white }}>
             <View style={{ width: "80%", flexDirection: "row", alignItems: 'center', justifyContent: 'space-between', }} >
 
-                <TouchableOpacity activeOpacity={0.8} style={{ justifyContent: 'center', alignItems: 'center' }} >
+                <TouchableOpacity onPress={() => props.navigation.navigate("PointsScreen")} activeOpacity={0.8} style={{ justifyContent: 'center', alignItems: 'center' }} >
                     {/* <Image style={{ width: RFPercentage(3.4), height: RFPercentage(3.4) }} source={require('../../../assets/images/cal.png')} /> */}
                     <FontAwesome5 name="file-powerpoint" style={{ marginTop: RFPercentage(0.5), fontSize: RFPercentage(3) }} color={Colors.primary} />
                     <Text style={{ marginTop: RFPercentage(0.3), color: Colors.primary, fontSize: RFPercentage(1.9) }}>
@@ -22,7 +22,7 @@ function BottomTab({ props }) {
                     </Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity activeOpacity={0.8} style={{ justifyContent: 'center', alignItems: 'center' }} >
+                <TouchableOpacity onPress={() => props.navigation.navigate("WorkoutScreen")} activeOpacity={0.8} style={{ justifyContent: 'center', alignItems: 'center' }} >
                     {/* <Image style={{ width: RFPercentage(3.4), height: RFPercentage(3.4) }} source={require('../../../assets/images/mes.png')} /> */}
                     <MaterialCommunityIcons name="facebook-workplace" style={{ marginTop: RFPercentage(0.5), fontSize: RFPercentage(3) }} color={Colors.primary} />
                     <Text style={{ color: Colors.primary, fontSize: RFPercentage(1.9) }}>
@@ -30,7 +30,7 @@ function BottomTab({ props }) {
                     </Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity activeOpacity={0.8} style={{ justifyContent: 'center', alignItems: 'center' }} >
+                <TouchableOpacity onPress={() => props.navigation.navigate("HomeScreen")} activeOpacity={0.8} style={{ justifyContent: 'center', alignItems: 'center' }} >
                     {/* <Image style={{ width: RFPercentage(3.4), height: RFPercentage(3.4) }} source={require('../../../assets/images/home.png')} /> */}
                     <AntDesign name="home" style={{ marginTop: RFPercentage(0.5), fontSize: RFPercentage(3) }} color={Colors.primary} />
                     <Text style={{ color: Colors.primary, fontSize: RFPercentage(1.9) }}>
@@ -38,7 +38,7 @@ function BottomTab({ props }) {
                     </Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity activeOpacity={0.8} style={{ justifyContent: 'center', alignItems: 'center' }} >
+                <TouchableOpacity onPress={() => props.navigation.navigate("UserScreen")} activeOpacity={0.8} style={{ justifyContent: 'center', alignItems: 'center' }} >
                     {/* <Image style={{ width: RFPercentage(3.4), height: RFPercentage(3.4) }} source={require('../../../assets/images/pet.png')} /> */}
                     <FontAwesome5 name="user-circle" style={{ marginTop: RFPercentage(0.5), fontSize: RFPercentage(3) }} color={Colors.primary} />
                     <Text style={{ color: Colors.primary, fontSize: RFPercentage(1.9) }}>
@@ -46,7 +46,7 @@ function BottomTab({ props }) {
                     </Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity activeOpacity={0.8} style={{ justifyContent: 'center', alignItems: 'center' }} >
+                <TouchableOpacity onPress={() => props.navigation.navigate("SettingsScreen")} activeOpacity={0.8} style={{ justifyContent: 'center', alignItems: 'center' }} >
                     {/* <Image style={{ width: RFPercentage(3.4), height: RFPercentage(3.4) }} source={require('../../../assets/images/acc.png')} /> */}
                     <AntDesign name="setting" style={{ marginTop: RFPercentage(0.5), fontSize: RFPercentage(3) }} color={Colors.primary} />
                     <Text style={{ color: Colors.primary, fontSize: RFPercentage(1.9) }}>
