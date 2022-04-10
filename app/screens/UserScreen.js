@@ -15,10 +15,12 @@ function UserScreen(props) {
 
     const data = [
         {
-            title: 'Health Track'
+            title: 'Health Track',
+            navi: "HealthTrackScreen"
         },
         {
-            title: 'Weight Track'
+            title: 'Weight Track',
+            navi: "WeightScreen"
         },
         {
             title: 'Activity'
@@ -63,7 +65,7 @@ function UserScreen(props) {
                                     <Text style={{ color: Colors.black, fontSize: RFPercentage(2.2), fontWeight: '500' }} >
                                         {item.title}
                                     </Text>
-                                    <TouchableOpacity activeOpacity={0.4} style={{ position: 'absolute', right: 0 }} >
+                                    <TouchableOpacity onPress={() => props.navigation.navigate(item.navi)} activeOpacity={0.4} style={{ position: 'absolute', right: 0 }} >
                                         <MaterialIcons name="navigate-next" style={{ fontSize: RFPercentage(3) }} color={Colors.black} />
                                     </TouchableOpacity>
                                 </View>
@@ -80,7 +82,7 @@ function UserScreen(props) {
             </ScrollView>
 
             {/* Bottom Tab */}
-            <BottomTab porps={props} />
+            <BottomTab props={props} />
         </Screen>
     );
 }
